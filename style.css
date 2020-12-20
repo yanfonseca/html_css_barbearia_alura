@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header{
     background: #BBBBBB;
     padding: 20px 0;
@@ -34,6 +38,11 @@ nav a:hover {
     color:#C78C19;
     text-decoration: underline;
 }
+
+/* :hover 
+:active
+:visited
+:required */
 
 .produtos {
     width: 940px;
@@ -100,8 +109,7 @@ footer {
 }
 
 main {
-    width: 940px;
-    margin: 0 auto
+
 }
 
 form {
@@ -156,5 +164,178 @@ table thead {
 table td, table th {
     border: 1px solid #000000;
     padding: 8px 15px;
+}
+
+/* css da página inicial */
+.banner {
+    width: 100%;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em 0;
+    clear: left;
+    color: rgba(0, 0, 0,0.8);
+    /* text-shadow: 2px 2px red; */
+}
+
+/* Medida proporcional */
+/* 16px é o tamanho padrão do navegador */
+/* 2em - dobra o tamanho da fonte base */
+
+/* .titulo-principal:first-letter{
+    font-weight: bold;
+} */
+
+/* .titulo-principal:before{
+    content: "[ "
+}
+
+.titulo-principal:after{
+    content:" ]"
+} */
+
+/* p:first-line{
+    font-style: italic;
+} */
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+.utensilios {
+    width: 150px;
+    float: left;
+    margin: 0 20px 20px 0; 
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+    /* box-shadow: inset 0 0 30px #FF0000; */
+}
+
+/* margin: 0 20px 20px 0;
+margin: cima direita baixo esquerda; */
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin:0 auto;
+}
+
+.lista-beneficios{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:before{
+    content:"★";
+}
+
+/* :last-child */
+/* :nth-child(4) */
+/* :nth-child(2n) elementos pares*/
+.itens:first-child {
+    font-weight: bold;
+}
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #000000;
+    /* box-shadow: 10px 10px 30px 20px #000000, -10px -10px yellow; */
+}
+
+.imagem-beneficios:hover{
+    opacity: 0.5;
+}
+
+.mapa {
+    padding: 3em 0 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+    /* background: radial-gradient( orange 50%, blue, red); */
+    /* background: linear-gradient(90deg, orange 50%, blue); */
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+.mapa p {
+    margin: 0 0 2em 0;
+    text-align: center;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+/* Seletores avançados */
+
+/* pega os filhos diretos */
+/* main > p {
+    background:red;
+} */
+
+/* pega o primeiro irmão */
+/* Também é possível fazer combinações section > p + h2 */
+
+/* img + p{
+    background: blue;
+} */
+/* pega todos os irmaos p de img */
+/* img ~ p{
+    background: yellow;
+} */
+
+/* Pega todos p, menos id missao */
+/* .principal p:not(#missao){
+    background:orange
+} */
+
+
+/* Operações no css */
+/* width: calc(40% - (40% * 4)) */
+
+
+/* media queries */
+/* adaptar o site a tela */
+@media screen and (max-width:480px){
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
 }
 
